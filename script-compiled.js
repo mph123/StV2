@@ -17,6 +17,11 @@ var Videos = function () {
   }
 
   _createClass(Videos, [{
+    key: 'load',
+    value: function load() {
+      console.log('load CHECK JSON');
+    }
+  }, {
     key: 'save',
     value: function save(title, date) {
       //save local
@@ -65,7 +70,7 @@ var Videos = function () {
 }();
 
 document.addEventListener('DOMContentLoaded', function () {
-  var countdown = new Videos();
+  var videos = new Videos();
   videos.load();
 });
 

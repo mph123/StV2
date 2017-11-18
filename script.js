@@ -8,7 +8,9 @@ class Videos {
     console.log(this.main);
   }
 
-
+  load(){
+    console.log('load CHECK JSON')
+  }
 
   save(title, date) {
   //save local
@@ -56,6 +58,6 @@ class Videos {
 
 
 document.addEventListener('DOMContentLoaded', () => {
-  const countdown = new Videos();
+  const videos = new Videos();
   videos.load();
 });
