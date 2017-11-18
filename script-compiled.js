@@ -19,7 +19,7 @@ var Videos = function () {
   _createClass(Videos, [{
     key: 'load',
     value: function load() {
-      console.log('load CHECK JSON');
+      console.log('eru til bíómyndir?');
     }
   }, {
     key: 'save',

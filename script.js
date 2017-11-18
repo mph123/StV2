@@ -9,7 +9,7 @@ class Videos {
   }
 
   load(){
-    console.log('load CHECK JSON')
+    console.log('eru til bíómyndir?');
   }
 
   save(title, date) {
