@@ -10,6 +10,7 @@ class Videos {
 
   load(){
     console.log('eru til bíómyndir?');
+
   }
 
   save(title, date) {
