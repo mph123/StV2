@@ -10,8 +10,36 @@ class Videos {
 
   load(){
     console.log('eru til bíómyndir?');
-    var myData = JSON.parse(videos);
-    console.log(myData[1].title);
+    //var myData = JSON.parse(videos);
+
+
+
+    var xobj = new XMLHttpRequest();
+    xobj.overrideMimeType("application/json");
+    xobj.open('GET', 'videos.json', true);
+    xobj.onreadystatechange = function () {
+      if (xobj.readyState == 4 && xobj.status == "200") {
+
+      // .open will NOT return a value but simply returns undefined in async mode so use a callback
+
+      callback(xobj.responseText);
+
+      }
+    }
+    xobj.send(null);
+
+
+    // Call to function with anonymous callback
+    loadJSON(function(response) {
+    // Do Something with the response e.g.
+    var jsonresponse;
+    jsonresponse = JSON.parse(response);
+
+    // Assuming json data is wrapped in square brackets as Drew suggests
+    console.log(jsonresponse[1].title);
+
+    }
+
 
   }
 
