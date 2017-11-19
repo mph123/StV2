@@ -8,40 +8,28 @@ class Videos {
     console.log(this.main);
   }
 
-  load(){
-    console.log('eru til bíómyndir?');
-    //var myData = JSON.parse(videos);
-
-
-
-    var xobj = new XMLHttpRequest();
-    xobj.overrideMimeType("application/json");
-    xobj.open('GET', 'videos.json', true);
-    xobj.onreadystatechange = function () {
-      if (xobj.readyState == 4 && xobj.status == "200") {
-
-      // .open will NOT return a value but simply returns undefined in async mode so use a callback
-
-      callback(xobj.responseText);
-
-      }
+  load() {
+    console.log('bu!');
+    var xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+        var myObj = JSON.parse(this.responseText);
+        console.log(myObj.videos[0].title);
+        console.log(myObj.categories[0]);
     }
-    xobj.send(null);
-
-
-    // Call to function with anonymous callback
-    loadJSON(function(response) {
-    // Do Something with the response e.g.
-    var jsonresponse;
-    jsonresponse = JSON.parse(response);
-
-    // Assuming json data is wrapped in square brackets as Drew suggests
-    console.log(jsonresponse[1].title);
-
-    }
-
-
+  };
+    xmlhttp.open("GET", "videos.json", true);
+    xmlhttp.send();
   }
+
+
+
+
+
+
+
+
+
 
   save(title, date) {
   //save local
@@ -76,10 +64,7 @@ class Videos {
       divs.appendChild(span2);
       this.container.appendChild(divs);
     }
-    document.querySelector('#title0').textContent = 'Dagar';
-    document.querySelector('#title1').textContent = 'Klukkustundir';
-    document.querySelector('#title2').textContent = 'Mínútur';
-    document.querySelector('#title3').textContent = 'Sekúntur';
+
   }
 
   delete() {
