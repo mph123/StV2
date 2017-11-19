@@ -20,6 +20,8 @@ var Videos = function () {
     key: 'load',
     value: function load() {
       console.log('eru til bíómyndir?');
+      var myData = JSON.parse(videos);
+      console.log(myData[1].title);
     }
   }, {
     key: 'save',
