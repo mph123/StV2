@@ -26,7 +26,10 @@ html { /* stylelint-disable-line */
   line-height: 1.5;
   background-color: #262626;
 }
-
+body {
+  max-width: $max-width;
+  margin: 0 auto;
+}
 header { /* stylelint-disable-line*/
   max-width: $max-width;
 }

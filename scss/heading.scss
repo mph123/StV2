@@ -1,8 +1,7 @@
 .heading {
-  width: 100%;
-  font-family: 'Roboto Slab', serif;
+
   font-size: 2rem;
-  border: 0;
+
 
   &__new {
 
@@ -17,8 +16,8 @@
   }
 
   &__one {
-    text-align: left;
+    margin: 0 auto;
     font-size: 2rem;
-    color: white;
+    color: #fff;
   }
-  }
+}
