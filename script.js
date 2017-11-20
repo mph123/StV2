@@ -2,10 +2,8 @@ class Videos {
   constructor() {
     this.error = document.querySelector('.error');
     this.main = document.querySelector('main');
-    this.new = document.querySelector('.new');
-    this.edu = document.querySelector('.edu');
-    this.ent = document.querySelector('.ent');
-    console.log(this.main);
+    this.videolist = document.querySelector('.videolist');
+
   }
 
   load() {
@@ -15,8 +13,7 @@ class Videos {
     if (this.readyState == 4 && this.status == 200) {
 
         const myObj = JSON.parse(this.responseText);
-        const catNum = myObj.categories.length;
-        console.log('fjöldi cat '+catNum);
+
         console.log(myObj.videos[0].title);
         console.log(myObj.categories[0]);
         self.showData(myObj);
@@ -30,20 +27,41 @@ class Videos {
 
   showData(myObj){
     console.log('you');
+    const title1 = myObj.videos[2].title;
+    const catNum = myObj.categories.length;
 
-    this.createElement();
+    for (let i = 0; i<catNum; i+=1){
+      //let fjoldi =
+      let cat = myObj.categories[i].title;
+      this.createElement(cat);
+
+    }
   }
 
-  parseDate(date, time) {
-    const endtimetest = `${date.value}T${time.value}:00`;
-    const endtime = new Date(endtimetest);
-    return endtime;
-  }
 
 
 
-  createElement() {
+  createElement(cat, fjoldi) {
+    const container = document.createElement('div');
+    const header = document.createElement('h2');
+
+    header.className = "videolist__header";
+    header.textContent = cat;
+
+    container.appendChild(header);
+
+    container.className = "videolist__container";
+    this.videolist.appendChild(container);
+
+
     for (let i = 0; i < 4; i += 1) {
+      console.log('daddara');
+    }
+
+
+
+
+      /*
       const divs = document.createElement('div');
       divs.setAttribute('id', `${i}box`);
       divs.className = 'countdown__box';
@@ -56,12 +74,20 @@ class Videos {
       divs.appendChild(span1);
       divs.appendChild(span2);
       this.main.appendChild(divs);
-    }
+      */
 
   }
 
   delete() {
     }
+
+  parseDate(date, time) {
+    const endtimetest = `${date.value}T${time.value}:00`;
+    const endtime = new Date(endtimetest);
+    return endtime;
+  }
+
+
   }
 
 
