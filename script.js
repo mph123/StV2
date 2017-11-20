@@ -9,32 +9,30 @@ class Videos {
   }
 
   load() {
-    console.log('bu!');
     var xmlhttp = new XMLHttpRequest();
+    var self = this;
     xmlhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
-        var myObj = JSON.parse(this.responseText);
+
+        const myObj = JSON.parse(this.responseText);
+        const catNum = myObj.categories.length;
+        console.log('fjöldi cat '+catNum);
         console.log(myObj.videos[0].title);
         console.log(myObj.categories[0]);
+        self.showData(myObj);
     }
   };
+
     xmlhttp.open("GET", "videos.json", true);
     xmlhttp.send();
+
   }
 
+  showData(myObj){
+    console.log('you');
 
-
-
-
-
-
-
-
-
-  save(title, date) {
-  //save local
+    this.createElement();
   }
-
 
   parseDate(date, time) {
     const endtimetest = `${date.value}T${time.value}:00`;
@@ -43,11 +41,6 @@ class Videos {
   }
 
 
-  hideForm() {
-  }
-
-  showForm() {
-  }
 
   createElement() {
     for (let i = 0; i < 4; i += 1) {
@@ -62,7 +55,7 @@ class Videos {
       span2.setAttribute('id', `title${i}`);
       divs.appendChild(span1);
       divs.appendChild(span2);
-      this.container.appendChild(divs);
+      this.main.appendChild(divs);
     }
 
   }
