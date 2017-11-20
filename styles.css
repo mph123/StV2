@@ -1,14 +1,36 @@
-.videolist {
-  display: flex;
-  flex-direction: column;
-  width: 100%; }
-  .videolist__container {
-    width: 100%;
-    height: 100px;
-    background: gray;
-    margin: 10px 0; }
+@charset "UTF-8";
+/* setjum box-sizing: border-box; á allt */
+html {
+  /* stylelint-disable-line */
+  box-sizing: border-box; }
 
-/*# sourceMappingURL=data:application/json;base64,ewoJInZlcnNpb24iOiAzLAoJImZpbGUiOiAic3R5bGVzLmNzcyIsCgkic291cmNlcyI6IFsKCQkic2Nzcy9pbmRleC5zY3NzIgoJXSwKCSJuYW1lcyI6IFtdLAoJIm1hcHBpbmdzIjogIkFBQUEsQUFBQSxVQUFVLENBQUM7RUFDVCxPQUFPLEVBQUUsSUFBSTtFQUNiLGNBQWMsRUFBRSxNQUFNO0VBQ3RCLEtBQUssRUFBRSxJQUFJLEdBV1o7RUFUQyxBQUFBLHFCQUFZLENBQUM7SUFDWCxLQUFLLEVBQUUsSUFBSTtJQUNYLE1BQU0sRUFBRSxLQUFLO0lBQ2IsVUFBVSxFQUFFLElBQUk7SUFDaEIsTUFBTSxFQUFFLE1BQU0sR0FDZiIKfQ== */
+*, *:before, *:after {
+  /* stylelint-disable-line */
+  box-sizing: inherit;
+  /* fjarlægjum margin og padding */
+  padding: 0;
+  margin: 0; }
+
+html {
+  /* stylelint-disable-line */
+  margin-right: 20px;
+  margin-left: 20px;
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  background-color: #262626; }
+
+body {
+  max-width: 1200px;
+  margin: 0 auto; }
+
+header {
+  /* stylelint-disable-line*/
+  max-width: 1200px; }
+
+main {
+  /* stylelint-disable-line */
+  max-width: 1200px;
   margin: 0 auto;
   overflow-x: hidden; }
 
