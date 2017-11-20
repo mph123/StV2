@@ -34,21 +34,21 @@ class Videos {
       let cat = myObj.categories[i].title;
       let fjoldi = myObj.categories[i].videos.length;
       console.log('fjoldi '+fjoldi);
-      this.createElement(cat, fjoldi);
+      this.createElement(cat, fjoldi, myObj);
     }
   }
 
 
 
 
-  createElement(cat, fjoldi) {
+  createElement(cat, fjoldi, myObj) {
     const container = document.createElement('div');
     const header = document.createElement('h2');
 
     header.className = "videolist__header";
     header.textContent = cat;
 
-    container.appendChild(header);
+    this.videolist.appendChild(header);
 
     container.className = "videolist__container";
     this.videolist.appendChild(container);
@@ -57,7 +57,26 @@ class Videos {
     for (let i = 0; i < fjoldi; i += 1) {
       const videoNum = document.createElement('div');
       videoNum.className = "videolist__video";
-      container.appenchild()
+
+      const poster = document.createElement('figure');
+      const titill = document.createElement('h3');
+      titill.className = "heading__three";
+      titill.textContent = myObj.videos[i].title;
+
+      const dags = document.createElement('span');
+
+      const img = document.createElement('img');
+      img.setAttribute('src', myObj.videos[i].poster);
+
+      poster.appendChild(img);
+
+      videoNum.appendChild(poster);
+      videoNum.appendChild(titill);
+      videoNum.appendChild(dags);
+
+      console.log('daddara');
+
+      container.appendChild(videoNum);
 
     }
 
