@@ -57,7 +57,7 @@ class Videos {
     for (let i = 0; i < fjoldi; i += 1) {
       const videoNum = document.createElement('div');
       videoNum.className = "videolist__video";
-      
+      container.appenchild()
 
     }
 
