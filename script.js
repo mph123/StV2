@@ -26,15 +26,15 @@ class Videos {
   }
 
   showData(myObj){
-    console.log('you');
+
     const title1 = myObj.videos[2].title;
     const catNum = myObj.categories.length;
-
     for (let i = 0; i<catNum; i+=1){
       //let fjoldi =
       let cat = myObj.categories[i].title;
-      this.createElement(cat);
-
+      let fjoldi = myObj.categories[i].videos.length;
+      console.log('fjoldi '+fjoldi);
+      this.createElement(cat, fjoldi);
     }
   }
 
@@ -54,8 +54,11 @@ class Videos {
     this.videolist.appendChild(container);
 
 
-    for (let i = 0; i < 4; i += 1) {
-      console.log('daddara');
+    for (let i = 0; i < fjoldi; i += 1) {
+      const videoNum = document.createElement('div');
+      videoNum.className = "videolist__video";
+      
+
     }
 
 
