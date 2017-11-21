@@ -12,8 +12,6 @@ videoControls.style.display = 'block';
 var back = document.getElementById('back');
 var playpause = document.getElementById('playpause');
 var mute = document.getElementById('mute');
-var volinc = document.getElementById('volinc');
-var voldec = document.getElementById('voldec');
 var fullscreen = document.getElementById('fs');
 var forward = document.getElementById('forward');
 
@@ -31,27 +29,40 @@ source.setAttribute('src', user.videos[passId-1].video);
 function setTime(tValue) {
   try {
     if (tValue == 0) {
-      video.currentTime = tValue;
-      }
-      else {
-      video.currentTime += tValue;
-      }
-       } catch (err) {
-       errMessage("Video content might not be loaded");
-       }
-       }
+    video.currentTime = tValue;
+    }
+    else {
+    video.currentTime += tValue;
+    }
+    } catch (err) {
+    errMessage("Video content might not be loaded");
+    }
+    }
 
  playpause.addEventListener('click', function(e) {
   if (video.paused || video.ended) video.play();
   else video.pause();
  });
 
+ document.getElementById("mute").addEventListener("click", function () {
+    if (video.muted) {
+      document.getElementById("mute").src="../img/mute.svg";
+    } else {
+      document.getElementById("mute").src="../img/mute.svg";
+    }
+}, false);
+
+
+
+
+
+
 rew.addEventListener('click', function() {
-  setTime(-1);
+  setTime(-3);
 }, false);
 
 forward.addEventListener('click', function() {
-  setTime(1);
+  setTime(3);
 }, false);
 
 fs.addEventListener('click', function() {
