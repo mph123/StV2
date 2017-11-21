@@ -78,6 +78,7 @@ class Videos {
 
       const dags = document.createElement('span');
       const img = document.createElement('img');
+      img.className = "videolist__img";
       img.setAttribute('src', myObj.videos[stak].poster);
 
       poster.appendChild(img);

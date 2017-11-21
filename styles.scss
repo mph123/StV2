@@ -24,17 +24,11 @@ html { /* stylelint-disable-line */
   font-family: "Open Sans", sans-serif;
   font-size: 16px;
   line-height: 1.5;
-  background-color: #262626;
 }
-body {
-  max-width: $max-width;
-  margin: 0 auto;
-}
+
 header { /* stylelint-disable-line*/
   max-width: $max-width;
-
-
-
+  margin: 0 auto;
 }
 
 main { /* stylelint-disable-line */
@@ -43,17 +37,11 @@ main { /* stylelint-disable-line */
   // þar sem við erum að eiga við neikvæð margin á grid, setjum overflow-x
   // hér sem hidden, þá fáum við ekki lárétta skrunstiku
   overflow-x: hidden;
-
-
 }
 
 section { /* stylelint-disable-line*/
- margin-left: -10px;
- margin-right: -10px;
-}
-img{
-  width: 100%;
-  height: 100%;
+  margin-right: -10px;
+  margin-left: -10px;
 }
 
 @import "scss/index";
