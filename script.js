@@ -16,6 +16,7 @@ class Videos {
 
         console.log(myObj.videos[0].title);
         console.log(myObj.categories[0]);
+        
         self.showData(myObj);
     }
   };
@@ -99,8 +100,8 @@ class Videos {
     console.log(a);
     for (let i = 0; i<a.length; i+=1){
       a[i].addEventListener('click', function (){
-
-        console.log(this.id);
+      console.log(this.id);
+      window.location.href='video.html?id='+this.id;
     });
   }
 
