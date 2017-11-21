@@ -38,7 +38,9 @@ class Videos {
       console.log('fjoldi '+fjoldi);
       this.createElement(cat, fjoldi, myObj, idArr);
 
+
     }
+    this.openVideo();
   }
 
 
@@ -90,7 +92,18 @@ class Videos {
   }
 
   openVideo(){
-    
+
+    console.log('halelúja');
+    var a = document.getElementsByClassName('videolist__video');
+
+    console.log(a);
+    for (let i = 0; i<a.length; i+=1){
+      a[i].addEventListener('click', function (){
+
+        console.log(this.id);
+    });
+  }
+
   }
 
 
@@ -108,4 +121,5 @@ class Videos {
 document.addEventListener('DOMContentLoaded', () => {
   const videos = new Videos();
   videos.load();
+
 });
