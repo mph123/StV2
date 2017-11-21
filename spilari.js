@@ -18,9 +18,7 @@ var fullscreen = document.getElementById('fs');
 var forward = document.getElementById('forward');
 
 var idstring = window.location.href;
-console.log(idstring);
 var passId = idstring[idstring.length-1];
-console.log('sdfsd: '+passId);
 var source = document.querySelector('source');
 
 //sækir upplýsingar json í localStorage

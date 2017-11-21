@@ -16,6 +16,7 @@
    width:100%;
    display: flex;
    justify-content: center;
+   align-items: center;
 }
 
 .controls > * {
@@ -28,8 +29,8 @@
 }
 
 .controls button {
-  width: 30px;
-  height: 30px;
+  width: 50px;
+  height: 50px;
 }
 
 .controls button[data-state="play"] {
@@ -41,15 +42,15 @@
 }
 
 #playpause{
-  background-image: url('img/play.svg')
+  background-image: url('img/play.svg');
 }
 
 #rew{
-  background-image: url('img/back.svg')
+  background-image: url('img/back.svg');
 }
 
 #forward{
-  background-image: url('img/next.svg')
+  background-image: url('img/next.svg');
 }
 #fs{
   background-image: url('img/fullscreen.svg');
