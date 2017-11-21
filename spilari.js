@@ -17,6 +17,18 @@ var voldec = document.getElementById('voldec');
 var fullscreen = document.getElementById('fs');
 var forward = document.getElementById('forward');
 
+var idstring = window.location.href;
+console.log(idstring);
+var passId = idstring[idstring.length-1];
+console.log('sdfsd: '+passId);
+var source = document.querySelector('source');
+
+
+var user = JSON.parse(localStorage.getItem('user'));
+//var cool = localStorage.getItem('donna');
+
+source.setAttribute('src', user.videos[passId-1].video);
+
 
 function setTime(tValue) {
   try {

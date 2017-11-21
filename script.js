@@ -16,7 +16,8 @@ class Videos {
 
         console.log(myObj.videos[0].title);
         console.log(myObj.categories[0]);
-        
+        localStorage.setItem('user', JSON.stringify(myObj));
+
         self.showData(myObj);
     }
   };
