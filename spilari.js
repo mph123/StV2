@@ -45,5 +45,15 @@ forward.addEventListener('click', function() {
 }, false);
 
 fs.addEventListener('click', function() {
-  
-})
+
+});
+
+fs.addEventListener('click', function(){
+  if(video.requestFullscreen){
+    video.requestFullscreen();}
+      else if(video.mozRequestFullScreen){
+        video.mozRequestFullScreen();
+      } else if(video.webkitRequestFullscreen){
+        video.webkitRequestFullscreen();
+      }
+    });

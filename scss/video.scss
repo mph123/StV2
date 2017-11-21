@@ -1,13 +1,9 @@
 .video-Container {
-  display: flex;
-  flex-direction: column;
-
-     max-width:64rem;
+    display: flex;
+    flex-direction: column;
      width:100%;
-     max-height:30.875rem;
      height:100%;
      margin:1.25rem auto;
-     padding:1.051%;
      background-color:#666;
      align-items: center;
 
@@ -50,8 +46,12 @@
   background-image: url('img/play.svg')
 }
 
-#back{
+#rew{
   background-image: url('img/back.svg')
+}
+
+#forward{
+  background-image: url()('img/next.svg')
 }
 
 
