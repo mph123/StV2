@@ -1,9 +1,58 @@
-.player {
+.video-Container {
   display: flex;
   flex-direction: column;
-  width: 100%;
 
+     max-width:64rem;
+     width:100%;
+     max-height:30.875rem;
+     height:100%;
+     margin:1.25rem auto;
+     padding:1.051%;
+     background-color:#666;
+     align-items: center;
 
+  .video {
+        align-self: center;
+      	height: auto;
+      }
+
+.controls {
+   width:100%;
+   display: flex;
+   justify-content: center;
+}
+
+.controls > * {
+   height:100%;
+   margin-left:5px;
+   justify-content: center;
+}
+.controls > *:first-child {
+   margin-left:0;
+}
+
+.controls button {
+   border:none;
+   background:transparent;
+   background-size:contain;
+   background-repeat:no-repeat;
+}
+
+.controls button[data-state="play"] {
+   background-image: url('data:img/play.svg');
+}
+
+.controls button[data-state="pause"] {
+   background-image: url('data:img/pause.svg');
+}
+
+#playpause{
+  background-image: url('img/play.svg')
+}
+
+#back{
+  background-image: url('img/back.svg')
+}
 
 
   &__hidden {
