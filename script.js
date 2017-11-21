@@ -65,6 +65,7 @@ class Videos {
 
       const videoNum = document.createElement('div');
       videoNum.className = "videolist__video";
+      videoNum.setAttribute('id', stak+1); //setur id Á hvert video div.
 
       const poster = document.createElement('figure');
       const titill = document.createElement('h3');
@@ -84,13 +85,14 @@ class Videos {
       console.log('daddara');
 
       container.appendChild(videoNum);
-
     }
 
   }
 
-  delete() {
-    }
+  openVideo(){
+    
+  }
+
 
   parseDate(date, time) {
     const endtimetest = `${date.value}T${time.value}:00`;

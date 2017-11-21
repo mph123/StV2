@@ -32,6 +32,9 @@ body {
 }
 header { /* stylelint-disable-line*/
   max-width: $max-width;
+
+
+
 }
 
 main { /* stylelint-disable-line */
@@ -41,11 +44,12 @@ main { /* stylelint-disable-line */
   // hér sem hidden, þá fáum við ekki lárétta skrunstiku
   overflow-x: hidden;
 
+
 }
 
 section { /* stylelint-disable-line*/
-  //margin-right: -10px;
-  //margin-left: -10px;
+ margin-left: -10px;
+ margin-right: -10px;
 }
 img{
   width: 100%;
