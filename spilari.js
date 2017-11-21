@@ -23,9 +23,9 @@ var passId = idstring[idstring.length-1];
 console.log('sdfsd: '+passId);
 var source = document.querySelector('source');
 
-
+//sækir upplýsingar json í localStorage
 var user = JSON.parse(localStorage.getItem('user'));
-//var cool = localStorage.getItem('donna');
+
 
 source.setAttribute('src', user.videos[passId-1].video);
 

@@ -6,11 +6,11 @@
      margin:1.25rem auto;
      background-color:#666;
      align-items: center;
-
-  .video {
-        align-self: center;
-      	height: auto;
-      }
+}
+.video {
+  align-self: center;
+	height: auto;
+}
 
 .controls {
    width:100%;
@@ -20,7 +20,7 @@
 
 .controls > * {
    margin-left:5px;
-   
+
 }
 .controls > *:first-child {
    margin-left:0;
@@ -28,9 +28,8 @@
 }
 
 .controls button {
-
-
-
+  width: 30px;
+  height: 30px;
 }
 
 .controls button[data-state="play"] {
@@ -54,13 +53,4 @@
 }
 #fs{
   background-image: url('img/fullscreen.svg');
-}
-
-
-  &__hidden {
-
-  }
-
-
-
 }
