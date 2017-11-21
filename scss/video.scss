@@ -19,19 +19,18 @@
 }
 
 .controls > * {
-   height:100%;
    margin-left:5px;
-   justify-content: center;
+   
 }
 .controls > *:first-child {
    margin-left:0;
+
 }
 
 .controls button {
-   border:none;
-   background:transparent;
-   background-size:contain;
-   background-repeat:no-repeat;
+
+
+
 }
 
 .controls button[data-state="play"] {
@@ -51,7 +50,10 @@
 }
 
 #forward{
-  background-image: url()('img/next.svg')
+  background-image: url('img/next.svg')
+}
+#fs{
+  background-image: url('img/fullscreen.svg');
 }
 
 
