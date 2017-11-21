@@ -14,12 +14,13 @@
   }
 
   &__video {
+    padding:0px;
     display: flex;
     flex-direction: column;
-    width: 33%;
+    width: 33.3%;
     height: 100%;
     background: black;
-    margin-right: 0;
+
   }
 
 

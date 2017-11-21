@@ -33,15 +33,19 @@ class Videos {
       //let fjoldi =
       let cat = myObj.categories[i].title;
       let fjoldi = myObj.categories[i].videos.length;
+      let idArr = myObj.categories[i].videos;
+      console.log(idArr);
       console.log('fjoldi '+fjoldi);
-      this.createElement(cat, fjoldi, myObj);
+      this.createElement(cat, fjoldi, myObj, idArr);
+
     }
   }
 
 
 
 
-  createElement(cat, fjoldi, myObj) {
+  createElement(cat, fjoldi, myObj, idArr) {
+
     const container = document.createElement('div');
     const header = document.createElement('h2');
 
@@ -55,18 +59,21 @@ class Videos {
 
 
     for (let i = 0; i < fjoldi; i += 1) {
+
+      const stak = idArr[i]-1; //raðar vídjóum eftir ID inn í categories
+      console.log('stak: '+stak);
+
       const videoNum = document.createElement('div');
       videoNum.className = "videolist__video";
 
       const poster = document.createElement('figure');
       const titill = document.createElement('h3');
       titill.className = "heading__three";
-      titill.textContent = myObj.videos[i].title;
+      titill.textContent = myObj.videos[stak].title;
 
       const dags = document.createElement('span');
-
       const img = document.createElement('img');
-      img.setAttribute('src', myObj.videos[i].poster);
+      img.setAttribute('src', myObj.videos[stak].poster);
 
       poster.appendChild(img);
 
@@ -79,24 +86,6 @@ class Videos {
       container.appendChild(videoNum);
 
     }
-
-
-
-
-      /*
-      const divs = document.createElement('div');
-      divs.setAttribute('id', `${i}box`);
-      divs.className = 'countdown__box';
-      const span1 = document.createElement('span');
-      span1.setAttribute('id', `num${i}`);
-      span1.className = 'countdown__num';
-      const span2 = document.createElement('span');
-      span2.className = 'countdown__title';
-      span2.setAttribute('id', `title${i}`);
-      divs.appendChild(span1);
-      divs.appendChild(span2);
-      this.main.appendChild(divs);
-      */
 
   }
 
