@@ -21,10 +21,8 @@ class Videos {
         self.showData(myObj);
     }
   };
-
     xmlhttp.open("GET", "videos.json", true);
     xmlhttp.send();
-
   }
 
   showData(myObj){
