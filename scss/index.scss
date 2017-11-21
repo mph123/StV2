@@ -9,18 +9,16 @@
     flex-wrap: wrap;
     width: 100%;
     height: 100%;
-    background: gray;
-    padding: 0 10px;
-    
+    margin-bottom: 40px;
   }
 
   &__video {
     display: flex;
     flex-direction: column;
     width: 33.3%;
+    padding: 0 10px;
     border: 0;
     height: 100%;
-    background: white;
   }
 
   &__img{

@@ -53,7 +53,7 @@ class Videos {
     const container = document.createElement('div');
     const header = document.createElement('h2');
 
-    header.className = "videolist__header";
+    header.className = "heading__two";
     header.textContent = cat;
 
     this.videolist.appendChild(header);
