@@ -43,3 +43,7 @@ rew.addEventListener('click', function() {
 forward.addEventListener('click', function() {
   setTime(1);
 }, false);
+
+fs.addEventListener('click', function() {
+  
+})
