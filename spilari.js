@@ -41,11 +41,17 @@ function setTime(tValue) {
     }
 
  playpause.addEventListener('click', function(e) {
-  if (video.paused || video.ended) video.play();
-  else video.pause();
+  if (video.paused || video.ended) {
+    video.play();
+    console.log("play");
+    playpause.className = "container__pause";}
+  else {
+    video.pause();
+    console.log("pause");
+    playpause.className = "container__play";
+
+  }
  });
-
-
 
 
 
@@ -53,13 +59,12 @@ function setTime(tValue) {
     if (video.muted) {
       video.muted = false;
       console.log("unmute");
-      unmute.style.display = "inline";
-      mute.style.display = "none";
+      mute.className = "container__mute";
+
     } else {
       console.log("mute");
-      mute.style.display = "inline";
-      unmute.style.display = "none;"
       video.muted = true;
+      mute.className = "container__unmute";
     }
 }, false);
 
