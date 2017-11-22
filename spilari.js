@@ -15,6 +15,7 @@ var mute = document.getElementById('mute');
 var unmute = document.getElementById('unmute');
 var fs = document.getElementById('fs');
 var forward = document.getElementById('forward');
+var overlay = document.getElementById('overlay');
 
 var idstring = window.location.href;
 var passId = idstring[idstring.length-1];
@@ -44,16 +45,18 @@ function setTime(tValue) {
   if (video.paused || video.ended) {
     video.play();
     console.log("play");
+    overlay.className = "container__hidden";
     playpause.className = "container__pause";}
+
   else {
     video.pause();
     console.log("pause");
     playpause.className = "container__play";
+    overlay.className = "container__overlay";
+
 
   }
  });
-
-
 
  mute.addEventListener("click", function () {
     if (video.muted) {
@@ -67,6 +70,22 @@ function setTime(tValue) {
       mute.className = "container__unmute";
     }
 }, false);
+
+
+    video.addEventListener('click', function(e) {
+     if (video.paused || video.ended) {
+       video.play();
+       console.log("play");
+       playpause.className = "container__pause";
+       overlay.className = "container__hidden";}
+
+     else {
+       video.pause();
+       console.log("pause");
+       playpause.className = "container__play";
+       overlay.className = "container__overlay";
+ }
+ }, false);
 
 
 
