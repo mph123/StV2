@@ -12,7 +12,8 @@ videoControls.style.display = 'block';
 var back = document.getElementById('back');
 var playpause = document.getElementById('playpause');
 var mute = document.getElementById('mute');
-var fullscreen = document.getElementById('fs');
+var unmute = document.getElementById('unmute');
+var fs = document.getElementById('fs');
 var forward = document.getElementById('forward');
 
 var idstring = window.location.href;
@@ -44,16 +45,23 @@ function setTime(tValue) {
   else video.pause();
  });
 
- document.getElementById("mute").addEventListener("click", function () {
+
+
+
+
+ mute.addEventListener("click", function () {
     if (video.muted) {
-      document.getElementById("mute").src="../img/mute.svg";
+      video.muted = false;
+      console.log("unmute");
+      unmute.style.display = "inline";
+      mute.style.display = "none";
     } else {
-      document.getElementById("mute").src="../img/mute.svg";
+      console.log("mute");
+      mute.style.display = "inline";
+      unmute.style.display = "none;"
+      video.muted = true;
     }
 }, false);
-
-
-
 
 
 
@@ -64,10 +72,6 @@ rew.addEventListener('click', function() {
 forward.addEventListener('click', function() {
   setTime(3);
 }, false);
-
-fs.addEventListener('click', function() {
-
-});
 
 fs.addEventListener('click', function(){
   if(video.requestFullscreen){
