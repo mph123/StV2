@@ -6,7 +6,6 @@ var videoControls = document.getElementById('video-controls');
 video.controls = false;
 
 // Display the user defined video controls
-videoControls.style.display = 'block';
 
 
 var back = document.getElementById('back');
@@ -71,7 +70,6 @@ function setTime(tValue) {
     }
 }, false);
 
-
     video.addEventListener('click', function(e) {
      if (video.paused || video.ended) {
        video.play();
@@ -86,8 +84,6 @@ function setTime(tValue) {
        overlay.className = "container__overlay";
  }
  }, false);
-
-
 
 rew.addEventListener('click', function() {
   setTime(-3);
