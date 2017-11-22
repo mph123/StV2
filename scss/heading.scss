@@ -3,8 +3,7 @@
 
 
   &__one {
-    margin: 0 auto;
-    font-size: 2rem;
+    margin: 10px auto;
     color: #fff;
   }
   &__two{
@@ -18,4 +17,9 @@
     overflow-x: hidden;
   }
 
+  &__video{
+    padding: 0 10px;
+    color: #fff;
+    margin: 0 auto;
+  }
 }

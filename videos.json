@@ -31,12 +31,28 @@
       "duration": 220,
       "poster": "./videos/16-9.png",
       "video": "./videos/bunny.mp4"
+    },
+    {
+      "id": 5,
+      "title": "Aukavídjó",
+      "created": 1511234874000,
+      "duration": 800,
+      "poster": "./videos/16-9.png",
+      "video": "./videos/bunny.mp4"
+    },
+    {
+      "id": 6,
+      "title": "Extravídjó",
+      "created": 1511134874000,
+      "duration": 800,
+      "poster": "./videos/16-9.png",
+      "video": "./videos/bunny.mp4"
     }
   ],
   "categories": [
     {
       "title": "Nýleg myndbönd",
-      "videos": [1, 2]
+      "videos": [1, 2, 5]
     },
     {
       "title": "Kennslumyndbönd",
@@ -44,7 +60,7 @@
     },
     {
       "title": "Skemmtimyndbönd",
-      "videos": [2, 3, 4]
+      "videos": [2, 3, 4, 5, 6]
     }
   ]
 }
