@@ -13,9 +13,6 @@ class Videos {
     if (this.readyState == 4 && this.status == 200) {
 
         const myObj = JSON.parse(this.responseText);
-
-        console.log(myObj.videos[0].title);
-        console.log(myObj.categories[0]);
         localStorage.setItem('user', JSON.stringify(myObj));
 
         self.showData(myObj);
@@ -34,8 +31,7 @@ class Videos {
       let cat = myObj.categories[i].title;
       let fjoldi = myObj.categories[i].videos.length;
       let idArr = myObj.categories[i].videos;
-      console.log(idArr);
-      console.log('fjoldi '+fjoldi);
+
       this.createElement(cat, fjoldi, myObj, idArr);
 
 
@@ -63,14 +59,22 @@ class Videos {
     for (let i = 0; i < fjoldi; i += 1) {
 
       const stak = idArr[i]-1; //raðar vídjóum eftir ID inn í categories
-      console.log('stak: '+stak);
+
 
       const videoNum = document.createElement('div');
       videoNum.className = "videolist__video";
       videoNum.setAttribute('id', stak+1); //setur id Á hvert video div.
 
       const poster = document.createElement('figure');
+      poster.className = "videolist__fig";
+      const time = document.createElement('div');
       const titill = document.createElement('h3');
+
+      time.className = "videolist__time";
+      time.textContent = this.msToTime(myObj.videos[stak].duration*1000);
+      poster.appendChild(time);
+
+
       titill.className = "heading__three";
       titill.textContent = myObj.videos[stak].title;
 
@@ -85,28 +89,28 @@ class Videos {
       videoNum.appendChild(titill);
       videoNum.appendChild(dags);
 
-      console.log('daddara');
-
       container.appendChild(videoNum);
     }
 
   }
 
   openVideo(){
-
-    console.log('halelúja');
     var a = document.getElementsByClassName('videolist__video');
 
-    console.log(a);
+
     for (let i = 0; i<a.length; i+=1){
       a[i].addEventListener('click', function (){
-      console.log(this.id);
       window.location.href='video.html?id='+this.id;
     });
   }
 
   }
-
+  // Höndla Tíma!!!
+  msToTime(lengd) {
+      const min = Math.floor(lengd / 60000);
+      const sek = ((lengd % 60000) / 1000).toFixed(0);
+    return (sek == 60 ? (min+1) + ":00" : min + ":" + (sek < 10 ? "0" : "") + sek);
+   }
 
   parseDate(date, time) {
     const endtimetest = `${date.value}T${time.value}:00`;
