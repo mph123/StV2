@@ -3,7 +3,6 @@
     flex-direction: column;
      width:100%;
      height:100%;
-     background-color:#666;
      align-items: center;
 
 
@@ -20,7 +19,8 @@
 }
 
   &__controls > * {
-   margin-left:5px;
+   margin:7px;
+   margin-bottom: 30px;
    width: 50px;
    height: 50px;
    background:transparent;
@@ -40,8 +40,8 @@
   &__overlay {
     content:url('img/play.svg');
     position: absolute;
-    bottom: 49%;
-    right: 49%;
+    bottom: 50%;
+    right: 50%;
     z-index:1;
     width: 50px;
     height: 50px;
@@ -73,8 +73,5 @@
 &__unmute {
   background-image: url('img/unmute.svg');
 }
-
-
-
 
 }

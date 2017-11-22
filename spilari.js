@@ -26,6 +26,8 @@ var user = JSON.parse(localStorage.getItem('user'));
 
 
 source.setAttribute('src', user.videos[passId-1].video);
+var heading = document.querySelector('.heading__video');
+heading.textContent = user.videos[passId-1].title;
 
 
 function setTime(tValue) {
@@ -53,8 +55,6 @@ function setTime(tValue) {
     console.log("pause");
     playpause.className = "container__play";
     overlay.className = "container__overlay";
-
-
   }
  });
 
