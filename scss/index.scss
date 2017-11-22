@@ -3,7 +3,6 @@
   flex-direction: column;
   width: 100%;
 
-
   &__container {
     display: flex;
     flex-direction: row;
@@ -20,7 +19,6 @@
   width: 80%;
   margin: 0 auto;
   z-index: 1000;
-
   }
 
   &__video {
@@ -31,9 +29,15 @@
     padding: 0 10px;
     border: 0;
     height: 100%;
-    margin-bottom: 25px;
+    margin-bottom: 30px;
     &:hover{
       cursor: pointer;
+    }
+    @media (max-width: 1000px) {
+      width: 50%;
+    }
+    @media (max-width: 500px) {
+      width: 100%;
     }
   }
 
@@ -55,7 +59,6 @@
     padding: 0 5px;
     z-index: 1;
     background: rgba(0,0,0,0.5);
-
   }
 
   &__created {
