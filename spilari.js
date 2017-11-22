@@ -5,9 +5,6 @@ var videoControls = document.getElementById('video-controls');
 // Hide the default controls
 video.controls = false;
 
-// Display the user defined video controls
-
-
 var back = document.getElementById('back');
 var playpause = document.getElementById('playpause');
 var mute = document.getElementById('mute');
