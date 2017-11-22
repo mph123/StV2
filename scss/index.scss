@@ -30,7 +30,7 @@
     border: 0;
     height: 100%;
     margin-bottom: 30px;
-    &:hover{
+    &:hover {
       cursor: pointer;
     }
     @media (max-width: 1000px) {
@@ -65,5 +65,9 @@
     font-size: 0.8rem;
     color: #fff;
   }
+}
 
+.error {
+  color: #fff;
+  text-align: center;
 }
