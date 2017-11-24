@@ -81,7 +81,7 @@ class Videos {
       container.appendChild(videoNum);
     }
   }
-  // Setur Event Listner á öll vídjó
+  //Setur Event Listner á öll vídjó
   openVideo(){
     const a = document.getElementsByClassName('videolist__video');
     for (let i = 0; i<a.length; i+=1){
@@ -90,7 +90,7 @@ class Videos {
       });
     }
   }
-  // Time Overlay(ms)
+  //Time Overlay(ms)
   msToTime(lengd) {
       const min = Math.floor(lengd / 60000);
       const sek = ((lengd % 60000) / 1000).toFixed(0);
