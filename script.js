@@ -9,6 +9,7 @@ class Videos {
   load() {
     var xmlhttp = new XMLHttpRequest();
     var self = this;
+    //xmlhttp.onerror = function(){console.log('error!! haa!');};
     xmlhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
 
@@ -16,13 +17,21 @@ class Videos {
         localStorage.setItem('user', JSON.stringify(myObj));
 
         self.showData(myObj);
-    } else{  } // show Engin gögn til á síðu
+    }
+    else if(this.readyState == 4 && this.status != 200) {
+      self.showError();
+    }
+
   };
     xmlhttp.open("GET", "videos.json", true);
     xmlhttp.send();
   }
 
-  showData(myObj){
+  showError() {
+    this.error.textContent = "Gat ekki hlaðið gögnum";
+  }
+
+  showData(myObj) {
     const title1 = myObj.videos[2].title;
     const catNum = myObj.categories.length;
     for (let i = 0; i<catNum; i+=1){
@@ -38,40 +47,29 @@ class Videos {
 
   //býr til categoríur og raðar réttum víjóum inn
   createElement(cat, fjoldi, myObj, idArr) {
-
     const container = document.createElement('div');
     const header = document.createElement('h2');
-
     header.className = "heading__two";
     header.textContent = cat;
-
     this.videolist.appendChild(header);
-
     container.className = "videolist__container";
     this.videolist.appendChild(container);
-
     for (let i = 0; i < fjoldi; i += 1) {
       const stak = idArr[i]-1; //raðar vídjóum eftir ID inn í categories
-
       const videoNum = document.createElement('div');
       videoNum.className = "videolist__video";
       videoNum.setAttribute('id', stak+1); //setur id Á hvert video div.
-
       const poster = document.createElement('figure');
       poster.className = "videolist__fig";
       const time = document.createElement('div');
       const titill = document.createElement('h3');
-
       time.className = "videolist__time";
       time.textContent = this.msToTime(myObj.videos[stak].duration*1000);
       poster.appendChild(time);
-
       titill.className = "heading__three";
       titill.textContent = myObj.videos[stak].title;
-
       const dags = document.createElement('span');
       const img = document.createElement('img');
-
       dags.className = "videolist__created";
       dags.textContent = this.parseTime(myObj.videos[stak].created);
       img.className = "videolist__img";
@@ -103,7 +101,6 @@ class Videos {
     const now = new Date();
 
     const tdelta = Date.parse(now) - created;
-    console.log(tdelta);
 
     const secs = Math.floor((tdelta % (1000 * 60)) / 1000);
     const mins = Math.floor((tdelta % (1000 * 60 * 60)) / (1000 * 60));

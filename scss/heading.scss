@@ -1,12 +1,14 @@
 .heading {
   font-size: 2rem;
 
-
   &__one {
+    font-size: 1.7rem;
     margin: 10px auto;
     color: #fff;
   }
-  &__two{
+
+  &__two {
+    margin-bottom: 10px;
     padding: 0 10px;
     color: #fff;
   }
@@ -17,8 +19,7 @@
     overflow-x: hidden;
   }
 
-  &__video{
-
+  &__video {
     padding: 0 10px;
     color: #fff;
     margin: 10px auto;
