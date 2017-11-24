@@ -1,29 +1,83 @@
-var videoContainer = document.getElementById('video-Container');
-var video = document.getElementById('video');
-var videoControls = document.getElementById('video-controls');
+//búa til section og div fyrir videospilara
 
-// Hide the default controls
+const main = document.querySelector('main');
+const container = document.createElement('section');
+container.className = "container";
+main.appendChild(container);
+
+const header = document.createElement('h2');
+header.className = "heading__video";
+container.appendChild(header);
+
+const videobox = document.createElement('div');
+videobox.className = "container__videobox";
+container.appendChild(videobox);
+
+const box = document.createElement('div');
+box.className = "container__box";
+container.appendChild(box);
+
+const controls = document.createElement('div');
+controls.className = "container__controls";
+box.appendChild(controls);
+
+//búa til div fyrir vidjó
+
+const div = document.createElement('div');
+div.className = "container__overlay";
+const videocontainer = document.querySelector('.container__videobox');
+  videocontainer.appendChild(div);
+  const overlay = document.querySelector('.container__overlay');
+
+const video = document.createElement('video');
+video.className = "container__video";
+const videoplayer = document.querySelector('.container__video');
+videocontainer.appendChild(video);
 video.controls = false;
 
-var back = document.getElementById('back');
-var playpause = document.getElementById('playpause');
-var mute = document.getElementById('mute');
-var unmute = document.getElementById('unmute');
-var fs = document.getElementById('fs');
-var forward = document.getElementById('forward');
-var overlay = document.getElementById('overlay');
+//div fyrir takka
+const videocontrols = document.querySelector('.container__controls');
+const rew = document.createElement('button');
+rew.className = 'container__rew';
+videocontrols.appendChild(rew);
+
+const playpause = document.createElement('button');
+playpause.className = 'container__play';
+videocontrols.appendChild(playpause);
+
+const mute = document.createElement('button');
+mute.className = 'container__mute';
+videocontrols.appendChild(mute);
+
+
+const fs = document.createElement('button');
+fs.className = 'container__fullscreen';
+videocontrols.appendChild(fs);
+
+const forward = document.createElement('button');
+forward.className = 'container__forward';
+videocontrols.appendChild(forward);
+
+const a = document.createElement('a');
+a.className = "container__linkur";
+a.href = 'index.html';
+a.innerHTML = 'Linkur til baka';
+container.appendChild(a);
+
 
 var idstring = window.location.href;
 var passId = idstring[idstring.length-1];
-var source = document.querySelector('source');
 
 //sækir upplýsingar json í localStorage
 var user = JSON.parse(localStorage.getItem('user'));
 
 
-source.setAttribute('src', user.videos[passId-1].video);
+video.setAttribute('src', user.videos[passId-1].video);
 var heading = document.querySelector('.heading__video');
 heading.textContent = user.videos[passId-1].title;
+
+
+
 
 
 function setTime(tValue) {
@@ -93,9 +147,9 @@ forward.addEventListener('click', function() {
 fs.addEventListener('click', function(){
   if(video.requestFullscreen){
     video.requestFullscreen();}
-      else if(video.mozRequestFullScreen){
-        video.mozRequestFullScreen();
-      } else if(video.webkitRequestFullscreen){
-        video.webkitRequestFullscreen();
+    else if(video.mozRequestFullScreen){
+    video.mozRequestFullScreen();
+    } else if(video.webkitRequestFullscreen){
+    video.webkitRequestFullscreen();
       }
     });
