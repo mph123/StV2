@@ -2,26 +2,26 @@
   font-size: 2rem;
 
   &__one {
-    font-size: 1.7rem;
     margin: 10px auto;
+    font-size: 1.7rem;
     color: #fff;
   }
 
   &__two {
-    margin-bottom: 10px;
     padding: 0 10px;
+    margin-bottom: 10px;
     color: #fff;
   }
 
   &__three {
+    overflow-x: hidden;
     color: #fff;
     white-space: nowrap;
-    overflow-x: hidden;
   }
 
   &__video {
     padding: 0 10px;
-    color: #fff;
     margin: 10px auto;
+    color: #fff;
   }
 }

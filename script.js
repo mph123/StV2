@@ -9,7 +9,7 @@ class Videos {
     const xmlhttp = new XMLHttpRequest();
     const self = this;
 
-    xmlhttp.onreadystatechange = function () {
+    xmlhttp.onreadystatechange = function request() {
       if (this.readyState === 4 && this.status === 200) {
         const myObj = JSON.parse(this.responseText);
         localStorage.setItem('user', JSON.stringify(myObj));
@@ -77,7 +77,7 @@ class Videos {
   openVideo() {
     const a = document.getElementsByClassName('videolist__video');
     for (let i = 0; i < a.length; i += 1) {
-      a[i].addEventListener('click', function () {
+      a[i].addEventListener('click', function selectV() {
         window.location.href = `video.html?id= ${this.id}`;
       });
     }

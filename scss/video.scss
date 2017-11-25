@@ -1,89 +1,91 @@
 .container {
-    display: flex;
-    flex-direction: column;
-     width:auto;
-     height:auto;
-     align-items: center;
-     padding: 0 10px;
+  display: flex;
+  width: auto;
+  height: auto;
+  padding: 0 10px;
+  flex-direction: column;
+  align-items: center;
 
-  &__box{
+  &__box {
     margin: 0 auto;
   }
 
-  &__hidden{
-    background: rgba(0, 0, 0, 0.0);
+  &__hidden {
     display: none;
+    background: rgba(0, 0, 0, 0);
   }
 
   &__controls {
-   width:100%;
-
-}
+    width: 100%;
+  }
 
   &__controls > * {
-   margin:7px;
-   margin-bottom: 30px;
-   width: 50px;
-   height: 50px;
-   background:transparent;
-   border:none;
-   background-size:contain;
-   background-repeat:no-repeat;
-}
+    width: 50px;
+    height: 50px;
+    margin-right: 7px;
+    margin-bottom: 30px;
+    margin-left: 7px;
+    background: transparent;
+    background-repeat: no-repeat;
+    background-size: contain;
+    border: 0;
+  }
 
   &__videobox {
     position: relative;
-
   }
 
   &__video {
-    max-width: 700px;
     z-index: -1;
+    max-width: 700px;
   }
 
-  &__overlaybox{
-    background: rgba(0, 0, 0, 0.5);
+  &__overlaybox {
+    position: absolute;
     z-index: 3;
     width: 100%;
-    height: 98%;
+    height: 98.5%;
     pointer-events: none;
-    position: absolute;
+    background: rgba(0, 0, 0, 0.5);
   }
 
   &__overlay {
     position: absolute;
+    bottom: 47%;
+    left: 47%;
+    z-index: 10;
     width: 50px;
     height: 50px;
-    left: 47%;
-    bottom: 47%;
-    z-index:10;
     pointer-events: none;
-    content: url('img/play.svg');
+    content: url("img/play.svg");
   }
 
-&__play {
-  background-image: url('img/play.svg');
-}
+  &__play {
+    background-image: url("img/play.svg");
+  }
 
-&__pause {
-  background-image: url('img/pause.svg');
-}
+  &__pause {
+    background-image: url("img/pause.svg");
+  }
 
-&__rew {
-  background-image: url('img/back.svg');
-}
+  &__rew {
+    background-image: url("img/back.svg");
+  }
 
-&__forward {
-  background-image: url('img/next.svg');
-}
-&__fullscreen {
-  background-image: url('img/fullscreen.svg');
-}
-&__mute {
-  background-image: url('img/mute.svg');
-}
-&__unmute {
-  background-image: url('img/unmute.svg');
-}
+  &__forward {
+    background-image: url("img/next.svg");
+  }
+
+  &__fullscreen {
+    background-image: url("img/fullscreen.svg");
+  }
+
+  &__mute {
+    background-image: url("img/mute.svg");
+  }
+
+  &__unmute {
+    background-image: url("img/unmute.svg");
+  }
 
 }
