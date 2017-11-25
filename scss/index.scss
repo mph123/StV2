@@ -13,13 +13,13 @@
   }
 
   &__container::after {
-  content: "";
-  background: #eee;
-  height: 1px;
-  width: 80%;
-  margin: 0 auto;
-  z-index: 1000;
-  }
+    content: "";
+    background: #eee;
+    height: 1px;
+    width: 80%;
+    margin: 0 auto;
+    z-index: 1000;
+    }
 
   &__video {
     position: relative;
