@@ -9,6 +9,7 @@ const container = document.querySelector('.container');
 const videocontainer = document.querySelector('.container__videobox');
 const overlaybox = document.querySelector('.container__overlaybox');
 
+
 const overlay = document.createElement('div');
 overlay.className = "container__overlay";
 overlaybox.appendChild(overlay);
@@ -82,12 +83,14 @@ function setTime(tValue) {
     video.play();
     console.log("play");
     overlay.className = "container__hidden";
+    overlaybox.className = "container__hidden";
     playpause.className = "container__pause";}
 
   else {
     video.pause();
     console.log("pause");
     playpause.className = "container__play";
+    overlaybox.className = "container__overlaybox";
     overlay.className = "container__overlay";
   }
  });
@@ -110,13 +113,16 @@ function setTime(tValue) {
        video.play();
        console.log("play");
        playpause.className = "container__pause";
-       overlay.className = "container__hidden";}
+       overlay.className = "container__hidden";
+       overlaybox.className = "container__hidden";}
+
 
      else {
        video.pause();
        console.log("pause");
        playpause.className = "container__play";
        overlay.className = "container__overlay";
+       overlaybox.className = "container__overlaybox";
  }
  }, false);
 
