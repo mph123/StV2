@@ -28,7 +28,7 @@ videocontrols.appendChild(forward);
 const a = document.createElement('a');
 a.className = 'container__linkur';
 a.href = 'index.html';
-a.innerHTML = 'Linkur til baka';
+a.innerHTML = 'Til baka';
 container.appendChild(a);
 const idstring = window.location.href;
 const passId = idstring[idstring.length - 1];
