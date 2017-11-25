@@ -1,42 +1,26 @@
 //búa til section og div fyrir videospilara
 
-const main = document.querySelector('main');
-const container = document.createElement('section');
-container.className = "container";
-main.appendChild(container);
 
-const header = document.createElement('h2');
-header.className = "heading__video";
-container.appendChild(header);
 
-const videobox = document.createElement('div');
-videobox.className = "container__videobox";
-container.appendChild(videobox);
-
-const box = document.createElement('div');
-box.className = "container__box";
-container.appendChild(box);
-
-const controls = document.createElement('div');
-controls.className = "container__controls";
-box.appendChild(controls);
 
 //búa til div fyrir vidjó
 
-const div = document.createElement('div');
-div.className = "container__overlay";
+const container = document.querySelector('.container');
 const videocontainer = document.querySelector('.container__videobox');
-  videocontainer.appendChild(div);
-  const overlay = document.querySelector('.container__overlay');
+const overlaybox = document.querySelector('.container__overlaybox');
+
+const overlay = document.createElement('div');
+overlay.className = "container__overlay";
+overlaybox.appendChild(overlay);
 
 const video = document.createElement('video');
 video.className = "container__video";
-const videoplayer = document.querySelector('.container__video');
 videocontainer.appendChild(video);
 video.controls = false;
 
 //div fyrir takka
 const videocontrols = document.querySelector('.container__controls');
+
 const rew = document.createElement('button');
 rew.className = 'container__rew';
 videocontrols.appendChild(rew);
