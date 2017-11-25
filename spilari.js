@@ -2,6 +2,7 @@ const container = document.querySelector('.container');
 const videocontainer = document.querySelector('.container__videobox');
 const overlaybox = document.querySelector('.container__overlaybox');
 const overlay = document.createElement('div');
+const errorvid = document.querySelector('.errorvid');
 overlay.className = 'container__overlay';
 overlaybox.appendChild(overlay);
 const video = document.createElement('video');
@@ -44,7 +45,7 @@ function setTime(tValue) {
       video.currentTime += tValue;
     }
   } catch (err) {
-
+    errorvid.textContent = 'Vídjó hleðst ekki';
   }
 }
 
