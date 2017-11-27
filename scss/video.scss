@@ -3,14 +3,14 @@
   width: auto;
   height: auto;
   padding: 0 10px;
+  line-height: 0;
   flex-direction: column;
   align-items: center;
-  line-height: 0;
 
   &__linkur {
     margin-bottom: 50px;
-    text-decoration: none;
     color: #fff;
+    text-decoration: none;
   }
 
   &__box {
@@ -23,8 +23,8 @@
   }
 
   &__controls {
-    margin-top: 10px;
     width: 100%;
+    margin-top: 10px;
   }
 
   &__controls > * {
@@ -40,18 +40,15 @@
   }
 
   &__videobox {
-    width: 100%;
-
     position: relative;
-
+    width: 100%;
   }
 
   &__video {
     z-index: -1;
     width: 100%;
-    height: 100%;
     max-width: 1200px;
-
+    height: 100%;
   }
 
   &__overlaybox {
@@ -104,8 +101,8 @@
 
   &__errorvid {
     position: absolute;
-    left: 50%;
     bottom: 50%;
+    left: 50%;
     color: #fff;
     transform: translate(-50%, -50%);
   }
