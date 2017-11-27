@@ -41,7 +41,6 @@ if (passId <= (user.videos.length)) {
   const heading = document.querySelector('.heading__video');
   heading.textContent = user.videos[passId - 1].title;
 } else {
-  console.log('abbababb');
   errorvid.textContent = 'Vídjóið er ekki til';
   overlay.className = 'container__hidden';
   overlaybox.className = 'container__hidden';
