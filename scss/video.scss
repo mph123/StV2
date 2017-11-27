@@ -98,8 +98,10 @@
   }
 
   &__errorvid {
-    max-width: 1200px;
-    width: 100%;
+    position: absolute;
+    left: 50%;
+    bottom: 50%;
     color: #fff;
+    transform: translate(-50%, -50%);
   }
 }

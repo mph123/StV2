@@ -2,7 +2,7 @@ const container = document.querySelector('.container');
 const videocontainer = document.querySelector('.container__videobox');
 const overlaybox = document.querySelector('.container__overlaybox');
 const overlay = document.createElement('div');
-const errorvid = document.querySelector('.errorvid');
+const errorvid = document.querySelector('.container__errorvid');
 overlay.className = 'container__overlay';
 overlaybox.appendChild(overlay);
 const video = document.createElement('video');
@@ -28,18 +28,24 @@ videocontrols.appendChild(forward);
 const a = document.createElement('a');
 a.className = 'container__linkur';
 a.href = 'index.html';
-a.innerHTML = 'Til baka';
+a.textContent = 'Til baka';
 container.appendChild(a);
 const idstring = window.location.href;
-const passId = idstring[idstring.length - 1];
+const passId = idstring.split('=').pop();
+console.log(passId);
 const user = JSON.parse(localStorage.getItem('user'));
+const concontrol = document.querySelector('.container__controls');
 // - athuga með id streng
-if (passId <= (user.videos.length+1) ) {
+if (passId <= (user.videos.length)) {
   video.setAttribute('src', user.videos[passId - 1].video);
   const heading = document.querySelector('.heading__video');
   heading.textContent = user.videos[passId - 1].title;
 } else {
+  console.log('abbababb');
   errorvid.textContent = 'Vídjóið er ekki til';
+  overlay.className = 'container__hidden';
+  overlaybox.className = 'container__hidden';
+  concontrol.className = 'container__hidden';
 }
 
 function setTime(tValue) {
