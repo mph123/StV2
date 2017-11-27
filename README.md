@@ -42,6 +42,9 @@ Ef skoða á aðalsíður er nóg að opna index.html. Þar er hægt að velja m
 
 Package.json inniheldur upplýsingar um pakka sem notaðir eru til að keyra verkefnið.
 
+Bættum við reglu í eslint til að koma í veg fyrir breakline vandamál á milli OsX og Windows10.
+"linebreak-style": 0 
+
 Ef keyra á verkefnið staðbundið þarf að afrita repository og installa note.js og keyra þýðanda til að stílar verkefnis virki.
 https://nodejs.org/en/
 
