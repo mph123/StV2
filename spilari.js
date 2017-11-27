@@ -32,7 +32,6 @@ a.textContent = 'Til baka';
 container.appendChild(a);
 const idstring = window.location.href;
 const passId = idstring.split('=').pop();
-console.log(passId);
 const user = JSON.parse(localStorage.getItem('user'));
 const concontrol = document.querySelector('.container__controls');
 // - athuga með id streng
