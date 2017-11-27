@@ -33,9 +33,14 @@ container.appendChild(a);
 const idstring = window.location.href;
 const passId = idstring[idstring.length - 1];
 const user = JSON.parse(localStorage.getItem('user'));
-video.setAttribute('src', user.videos[passId - 1].video);
-const heading = document.querySelector('.heading__video');
-heading.textContent = user.videos[passId - 1].title;
+// - athuga með id streng
+if (passId <= (user.videos.length+1) ) {
+  video.setAttribute('src', user.videos[passId - 1].video);
+  const heading = document.querySelector('.heading__video');
+  heading.textContent = user.videos[passId - 1].title;
+} else {
+  errorvid.textContent = 'Vídjóið er ekki til';
+}
 
 function setTime(tValue) {
   try {
@@ -45,7 +50,7 @@ function setTime(tValue) {
       video.currentTime += tValue;
     }
   } catch (err) {
-    errorvid.textContent = 'Vídjó hleðst ekki';
+    errorvid.textContent = 'Vídjóið er ekki til';
   }
 }
 
