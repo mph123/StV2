@@ -78,7 +78,7 @@ class Videos {
     const a = document.getElementsByClassName('videolist__video');
     for (let i = 0; i < a.length; i += 1) {
       a[i].addEventListener('click', function selectV() {
-        window.location.href = `video.html?id= ${this.id}`;
+        window.location.href = `video.html?id=${this.id}`;
       });
     }
   }

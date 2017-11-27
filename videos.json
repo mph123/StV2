@@ -44,7 +44,7 @@
       "id": 6,
       "title": "Extravídjó",
       "created": 1511134874000,
-      "duration": 800,
+      "duration": 1200,
       "poster": "./videos/16-9.png",
       "video": "./videos/bunny.mp4"
     }
@@ -52,7 +52,7 @@
   "categories": [
     {
       "title": "Nýleg myndbönd",
-      "videos": [1, 2, 5]
+      "videos": [1, 2]
     },
     {
       "title": "Kennslumyndbönd",

@@ -50,7 +50,7 @@ function setTime(tValue) {
       video.currentTime += tValue;
     }
   } catch (err) {
-    errorvid.textContent = 'Vídjóið er ekki til';
+    errorvid.textContent = 'Virkni biluð, afsakið';
   }
 }
 
