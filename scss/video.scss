@@ -5,6 +5,7 @@
   padding: 0 10px;
   flex-direction: column;
   align-items: center;
+  line-height: 0;
 
   &__linkur {
     margin-bottom: 50px;
@@ -40,6 +41,7 @@
 
   &__videobox {
     width: 100%;
+
     position: relative;
 
   }
@@ -49,7 +51,7 @@
     width: 100%;
     height: 100%;
     max-width: 1200px;
-    margin-bottom: -7px;
+
   }
 
   &__overlaybox {
